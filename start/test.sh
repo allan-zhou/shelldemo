@@ -18,3 +18,9 @@ echo "要输出的信息是：$message"
 # 反引号, 反引号要求 Shell 执行被它括起来的内容。
 message=`pwd`
 echo "当前的目录是：$message"
+
+
+# echo $(ls *.md)
+KEY=$(ls ./start/*.sh)
+echo "我要找的文件是：$KEY，对不对?"
+echo "我要找的文件是：${KEY},对不对?"
