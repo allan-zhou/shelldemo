@@ -24,3 +24,6 @@ echo "当前的目录是：$message"
 KEY=$(ls ./start/*.sh)
 echo "我要找的文件是：$KEY，对不对?"
 echo "我要找的文件是：${KEY},对不对?"
+
+OS_ARCH=$(echo "$(uname -s|tr '[:upper:]' '[:lower:]'|sed 's/mingw64_nt.*/windows/')-$(uname -m | sed 's/x86_64/amd64/g')" | awk '{print tolower($0)}')
+echo $OS_ARCH
